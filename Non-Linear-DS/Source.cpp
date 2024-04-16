@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+	int value;
 	cout << "Testing BST" << endl;
 	BSTree<int> B;
 	B.insert(100);
@@ -17,6 +18,11 @@ int main()
 	B.insert(210);
 	B.remove(100);
 	B.traverse(INORDER);
-
+	cout << "Enter Value to Find Level Of Node" << endl;
+	cin >> value;
+	if (B.getLevel(value) == -1)
+		cout << "Value Doesn't Exist" << endl;
+	else 
+	cout<<"level of Node With Value "<<value<<" is "<<B.getLevel(value);
 	return 0;
 }

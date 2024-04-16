@@ -268,7 +268,29 @@ void BSTree<T>::deleteBST(BSTNode<T>* node)
 	deleteBST(leftTreeNode);
 	deleteBST(rightTreeNode);
 }
+template <class T>
+int BSTree<T>::getLevel(T val) {
+	int count = 0;
+	if (findNode(val) == NULL)
+		return -1;
+	else {
+		BSTNode <T>* tmp = root;
+		while(tmp!=NULL){
+		if (val > tmp->value) {
+			tmp = tmp->right;
+			count++;
+		}
+		else if (val < tmp->value) {
+			tmp = tmp->left;
+			count++;
+		}
+		else {
+			return count;
+		}
 
+		}
+	}
+}
 template <class T>
 BSTree<T>::~BSTree(void)
 {
