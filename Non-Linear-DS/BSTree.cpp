@@ -32,6 +32,8 @@ template <class T>
 BSTNode<T>* BSTree<T>::findNode(T val)
 {
 	BSTNode<T>* temp = root;
+	
+
 	while (temp != NULL)
 	{
 		if (temp->value == val)
@@ -55,8 +57,7 @@ BSTNode<T>* BSTree<T>::findNode(T val)
 template <class T>
 void BSTree<T>::insert(T val)
 {
-	assert(contains(val) == false);
-
+	assert(!contains(val));
 	BSTNode<T>* nodeToBeInserted = new BSTNode<T>(val);
 	if (root == NULL)
 	{
@@ -149,28 +150,28 @@ void BSTree<T>::postOrder(BSTNode<T>* node)
 template <class T>
 BSTNode<T>* BSTree<T>::findParent(T val)
 {
-	BSTNode<T>* b = NULL;
-	BSTNode<T>* a = root;
+	BSTNode<T>* parent = NULL;
+	BSTNode<T>* node= root;
 
-	while (a != NULL)
+	while (node != NULL)
 	{
-		if (a->value == val)
+		if (node->value == val)
 		{
 			break;
 		}
 
-		b = a;
-		if (a->value > val)
+		parent = node;
+		if (node->value > val)
 		{
-			a = a->left;
+			node = node->left;
 		}
 		else
 		{
-			a = a->right;
+			node = node->right;
 		}
 	}
 
-	return b;
+	return parent;
 }
 
 template <class T>
