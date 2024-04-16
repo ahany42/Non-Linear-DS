@@ -16,7 +16,7 @@ int main()
 	B.insert(88);
 	B.insert(99);
 	B.insert(210);
-	B.remove(100);
+	//B.remove(100);
 	B.traverse(INORDER);
 	cout << "Enter Value to Find Level Of Node" << endl;
 	cin >> value;
