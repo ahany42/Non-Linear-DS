@@ -29,14 +29,13 @@ public:
 	bool contains(T val);
 	BSTNode<T>* findNode(T val);
 	void insert(T val);
-
 	void traverse(Order order);
-
 	void inOrder(BSTNode<T>* node);
 	void preOrder(BSTNode<T>* node);
 	void postOrder(BSTNode<T>* node);
 	BSTNode<T>* findParent(T val);
 	BSTNode<T>* findMin(BSTNode<T>* start);
+	BSTNode<T>* findMax(BSTNode<T>* start);
 	void remove(T val);
 	void deleteBST(BSTNode<T>* node);
 };

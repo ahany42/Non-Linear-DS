@@ -184,6 +184,18 @@ BSTNode<T>* BSTree<T>::findMin(BSTNode<T>* start)
 
 	return minNode;
 }
+template <class T>
+BSTNode<T>* BSTree<T>::findMax(BSTNode<T>* start)
+{
+	BSTNode<T>* maxNode = start;
+	while (maxNode->right != NULL)
+	{
+		maxNode =maxNode->right;
+	}
+
+	return maxNode;
+}
+
 
 template <class T>
 void BSTree<T>::remove(T val)
