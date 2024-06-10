@@ -29,6 +29,8 @@ public:
 	bool contains(T val);
 	BSTNode<T>* findNode(T val);
 	void insert(T val);
+	//Function to return level of the node
+	int getLevel(T val);
 	void traverse(Order order);
 	void inOrder(BSTNode<T>* node);
 	void preOrder(BSTNode<T>* node);

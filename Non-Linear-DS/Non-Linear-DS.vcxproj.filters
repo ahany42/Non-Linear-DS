@@ -21,9 +21,15 @@
     <ClCompile Include="BSTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MatrixGraph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BSTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixGraph.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
